@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.zarnth.savr.presentation.root.bottomAppBarItems
 
@@ -20,13 +21,13 @@ fun RootBottomBar(
         bottomAppBarItems.forEachIndexed { index, item ->
             val isClicked = currentTab == index
             NavigationBarItem(
-                label = { Text(item.title) },
+                label = { Text(stringResource(item.titleRes)) },
                 selected = isClicked,
                 onClick = { onTabChange(index) },
                 icon = {
                     Icon(
                         painter = painterResource(if (isClicked) item.iconFilled else item.icon),
-                        contentDescription = item.title,
+                        contentDescription = stringResource(item.titleRes),
                         modifier = Modifier.size(24.dp)
                     )
                 }
