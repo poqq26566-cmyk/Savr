@@ -20,7 +20,9 @@ import androidx.compose.ui.Modifier
 import android.widget.Toast
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.zarnth.savr.R
 import com.zarnth.savr.domain.model.Bookmark
 import com.zarnth.savr.openChromeTab
 import com.zarnth.savr.presentation.home.components.BookmarkGrid
@@ -79,7 +81,7 @@ fun HomeScreen(
 
     LaunchedEffect(state.duplicateToastKey) {
         if (state.duplicateToastKey > 0) {
-            Toast.makeText(context, "URL already exists", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, stringResource(R.string.url_exists), Toast.LENGTH_SHORT).show()
         }
     }
 
