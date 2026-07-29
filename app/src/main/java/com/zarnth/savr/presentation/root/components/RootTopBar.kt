@@ -22,17 +22,11 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.zarnth.savr.R
-import com.zarnth.savr.presentation.collection.CollectionEvents
-import com.zarnth.savr.presentation.collection.CollectionState
-import com.zarnth.savr.presentation.collection.CollectionViewModel
-import com.zarnth.savr.presentation.home.HomeEvents
-import com.zarnth.savr.presentation.home.HomeState
-import com.zarnth.savr.presentation.home.HomeViewModel
 import com.zarnth.savr.presentation.root.bottomAppBarItems
-import com.zarnth.savr.presentation.search.SearchViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,7 +47,7 @@ fun SelectionTopBar(
             IconButton(onClick = onClose) {
                 Icon(
                     painter = painterResource(R.drawable.close_icon),
-                    contentDescription = "Clear selection"
+                    contentDescription = stringResource(R.string.cancel)
                 )
             }
         },
@@ -62,7 +56,7 @@ fun SelectionTopBar(
                 IconButton(onClick = onDeselectAll) {
                     Icon(
                         painter = painterResource(R.drawable.deselct_all),
-                        contentDescription = "Deselect all",
+                        contentDescription = stringResource(R.string.deselect_all),
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -70,7 +64,7 @@ fun SelectionTopBar(
                 IconButton(onClick = onSelectAll) {
                     Icon(
                         painter = painterResource(R.drawable.selectall_icon),
-                        contentDescription = "Select all",
+                        contentDescription = stringResource(R.string.select_all),
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -79,7 +73,7 @@ fun SelectionTopBar(
                 IconButton(onClick = onAddToCollection) {
                     Icon(
                         painter = painterResource(R.drawable.bookmark_add),
-                        contentDescription = "Add to collection",
+                        contentDescription = stringResource(R.string.add_to_collection),
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -87,7 +81,7 @@ fun SelectionTopBar(
             IconButton(onClick = onDelete) {
                 Icon(
                     painter = painterResource(R.drawable.delete_icon),
-                    contentDescription = "Delete selected"
+                    contentDescription = stringResource(R.string.delete_selected)
                 )
             }
         }
@@ -128,7 +122,7 @@ fun SearchTopBar(
             IconButton(onClick = onClose) {
                 Icon(
                     painter = painterResource(R.drawable.close_icon),
-                    contentDescription = "Close search"
+                    contentDescription = stringResource(R.string.cancel)
                 )
             }
         }
@@ -149,8 +143,8 @@ fun DefaultTopBar(
         scrollBehavior = scrollBehavior,
         title = {
             Text(
-                if (currentTab == 0) "Savr Bookmarks"
-                else bottomAppBarItems[currentTab].title
+                if (currentTab == 0) stringResource(R.string.home_title)
+                else stringResource(bottomAppBarItems[currentTab].titleRes)
             )
         },
         actions = {
@@ -158,7 +152,7 @@ fun DefaultTopBar(
                 IconButton(onClick = onSearchClick) {
                     Icon(
                         painter = painterResource(R.drawable.search_icon),
-                        contentDescription = "Search",
+                        contentDescription = stringResource(R.string.search_placeholder),
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -167,7 +161,7 @@ fun DefaultTopBar(
                 IconButton(onClick = onSortClick) {
                     Icon(
                         painter = painterResource(R.drawable.filter_icon),
-                        contentDescription = "Sort",
+                        contentDescription = stringResource(R.string.sort_by),
                         modifier = Modifier.size(24.dp)
                     )
                 }
