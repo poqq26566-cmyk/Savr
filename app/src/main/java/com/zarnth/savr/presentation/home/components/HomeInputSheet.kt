@@ -19,9 +19,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.zarnth.savr.R
 
@@ -48,7 +48,7 @@ fun HomeInputSheet(
                 Spacer(modifier = Modifier.height(12.dp))
 
                 Text(
-                    text = "New Bookmark",
+                    text = stringResource(R.string.new_bookmark),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -68,13 +68,14 @@ fun HomeInputSheet(
                     isError = showError,
                     leadingIcon = {
                         Icon(
-                           painter = painterResource(R.drawable.link_three),
+                            painter = painterResource(R.drawable.link_three),
                             contentDescription = null,
-                            modifier = Modifier.size(24.dp),    tint = MaterialTheme.colorScheme.surfaceTint,
+                            modifier = Modifier.size(24.dp),
+                            tint = MaterialTheme.colorScheme.surfaceTint,
                         )
                     },
                     placeholder = {
-                        Text("https://example.com")
+                        Text(stringResource(R.string.new_bookmark_hint))
                     },
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.Done
@@ -82,7 +83,7 @@ fun HomeInputSheet(
                     supportingText = if (showError) {
                         {
                             Text(
-                                "Enter a valid URL",
+                                stringResource(R.string.enter_valid_url),
                                 color = MaterialTheme.colorScheme.error
                             )
                         }
@@ -101,7 +102,7 @@ fun HomeInputSheet(
                     enabled = isValidUrl,
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Save Bookmark")
+                    Text(stringResource(R.string.save_bookmark))
                 }
 
                 Spacer(modifier = Modifier.height(8.dp))
@@ -109,7 +110,7 @@ fun HomeInputSheet(
                 TextButton(
                     onClick = onDismissRequest
                 ) {
-                    Text("Cancel")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         }
