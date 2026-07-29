@@ -1,3 +1,140 @@
 <resources>
     <string name="app_name">Savr</string>
+    
+    <!-- 通用 -->
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="ok">好的</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="loading">加载中…</string>
+    <string name="enable">启用</string>
+    <string name="disable">禁用</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+    
+    <!-- 底部导航 -->
+    <string name="nav_home">书签</string>
+    <string name="nav_collections">收藏集</string>
+    <string name="nav_settings">设置</string>
+    
+    <!-- 主页 -->
+    <string name="home_title">Savr 书签</string>
+    <string name="home_empty_title">┑(￣Д ￣)┍</string>
+    <string name="home_empty_subtitle">点击 + 添加书签</string>
+    <string name="new_bookmark">新建书签</string>
+    <string name="new_bookmark_hint">https://example.com</string>
+    <string name="save_bookmark">保存书签</string>
+    <string name="enter_valid_url">请输入有效网址</string>
+    <string name="url_exists">网址已存在</string>
+    <string name="bookmark_preview">预览</string>
+    <string name="open_in_browser">在浏览器中打开</string>
+    <string name="copy_link">复制链接</string>
+    <string name="link_copied">链接已复制</string>
+    
+    <!-- 选择模式 -->
+    <string name="selected_count">已选 %d 项</string>
+    <string name="select_all">全选</string>
+    <string name="deselect_all">取消全选</string>
+    <string name="delete_selected">删除选中项</string>
+    <string name="add_to_collection">添加到收藏集</string>
+    
+    <!-- 搜索 -->
+    <string name="search_placeholder">搜索书签…</string>
+    <string name="search_in_collection">在收藏集中搜索…</string>
+    <string name="search_type_hint">输入关键词搜索</string>
+    <string name="search_empty_title">┑(￣Д ￣)┍</string>
+    <string name="search_no_results">没有找到“%s”的结果</string>
+    
+    <!-- 排序 -->
+    <string name="sort_by">排序方式</string>
+    <string name="sort_date_newest">日期（新到旧）</string>
+    <string name="sort_date_oldest">日期（旧到新）</string>
+    <string name="sort_title_asc">标题（A-Z）</string>
+    <string name="sort_title_desc">标题（Z-A）</string>
+    
+    <!-- 收藏集 -->
+    <string name="new_collection">新建收藏集</string>
+    <string name="collection_name_hint">收藏集名称</string>
+    <string name="create_collection">创建收藏集</string>
+    <string name="collection_empty_title">┑(￣Д ￣)┍</string>
+    <string name="collection_empty_subtitle">点击 + 创建收藏集</string>
+    <string name="collection_empty_detail">这个收藏集还没有书签</string>
+    <string name="bookmark_count">%d 个书签</string>
+    <string name="bookmark_single">%d 个书签</string>
+    <string name="uncategorized">未分类</string>
+    <string name="add_to_collection_picker_title">添加到收藏集</string>
+    <string name="no_collections_yet">还没有收藏集</string>
+    <string name="remove_from_collection">从收藏集移除</string>
+    
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    
+    <!-- 主题 -->
+    <string name="theme_section">主题</string>
+    <string name="theme_label">主题</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="dynamic_color_label">动态颜色</string>
+    <string name="choose_theme">选择主题</string>
+    
+    <!-- 通用设置 -->
+    <string name="general_section">常规</string>
+    <string name="default_tap_action">默认点击动作</string>
+    <string name="tap_action_preview">预览</string>
+    <string name="tap_action_open">在浏览器中打开</string>
+    <string name="tap_action_copy">复制链接</string>
+    <string name="view_mode_label">视图模式</string>
+    <string name="view_mode_grid">网格</string>
+    <string name="view_mode_list">列表</string>
+    <string name="choose_view_mode">选择视图模式</string>
+    <string name="on_tap_label">点击动作</string>
+    
+    <!-- 数据 -->
+    <string name="data_section">数据</string>
+    <string name="export_bookmarks">导出书签</string>
+    <string name="export_subtitle_json_html">JSON 或 HTML</string>
+    <string name="import_bookmarks">导入书签</string>
+    <string name="import_subtitle_json_html">JSON 或 HTML</string>
+    <string name="auto_backup_label">自动备份</string>
+    <string name="auto_backup_subtitle_off">已关闭</string>
+    <string name="auto_backup_subtitle_on">上次备份：%s</string>
+    <string name="auto_backup_subtitle_no_backup">尚未备份</string>
+    <string name="auto_backup_path">/storage/Download/Savr/savr_autobackup.json</string>
+    <string name="export_as">导出为</string>
+    <string name="import_from">导入自</string>
+    <string name="json_format">JSON</string>
+    <string name="html_format">HTML</string>
+    
+    <!-- 导入导出结果 -->
+    <string name="export_success">导出成功</string>
+    <string name="export_failed">导出失败</string>
+    <string name="import_success_title">导入成功</string>
+    <string name="import_success_message">书签和收藏集已恢复</string>
+    <string name="import_failed_title">导入失败</string>
+    <string name="import_failed_message">%s</string>
+    <string name="browser_import_success">浏览器导入完成</string>
+    <string name="browser_import_detail">导入 %d 个书签到 %d 个文件夹（跳过 %d 个重复）</string>
+    <string name="browser_import_failed">浏览器导入失败</string>
+    
+    <!-- 自动备份提示 -->
+    <string name="auto_backup_dialog_title">启用自动备份？</string>
+    <string name="auto_backup_dialog_message">自动备份会镜像当前书签。</string>
+    <string name="auto_backup_dialog_warning">如果删除书签，备份也会同步删除。</string>
+    <string name="auto_backup_dialog_advice">如需永久保存，请在删除前使用“导出书签”。</string>
+    
+    <!-- 社区 -->
+    <string name="community_section">社区</string>
+    <string name="star_on_github">在 GitHub 上 Star</string>
+    <string name="report_issue">报告问题</string>
+    
+    <!-- 法律 -->
+    <string name="legal_section">法律</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="terms_conditions">服务条款</string>
+    
+    <!-- 关于 -->
+    <string name="about_section">关于</string>
+    <string name="app_version">应用版本</string>
 </resources>
